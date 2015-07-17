@@ -1,0 +1,23 @@
+.dialog .file_type p,
+.dialog .import_mode p,
+.dialog .file label {
+  display: block;
+  margin: 1em 0;
+  font-weight: bold;
+}
+
+.dialog .file_type .rtb {
+  padding-left: 10px;
+}
+
+.dialog .import_mode .rtb {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.dialog .file input[type=file] {
+  margin: 10px 0 30px;
+  display: block;
+  padding-left: 10px;
+}

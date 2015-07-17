@@ -1,0 +1,11 @@
+.new_client_signup {
+  padding: 10px;
+}
+
+.pricing_configuration .vendor_category_limit .select2-container {
+  margin-top: 10px; 
+}
+
+.pricing_configuration .vendor_category_limit select {
+  width: 100%; 
+}

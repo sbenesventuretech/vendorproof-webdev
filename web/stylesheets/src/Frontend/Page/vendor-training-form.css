@@ -1,0 +1,102 @@
+.form_field {
+    margin-bottom: 12px;
+}
+
+.user_entry_required span.label:before,
+.user_entry_required label:before {
+    content: '*';
+    color: red;
+}
+
+.address_form label,
+.name_form .label {
+  font-size: 12px;
+  display: block;
+  margin: 0 0 3px;
+}
+
+.address_form label.address_line_last:before {
+    content: none;
+}
+
+#bx4864_23162_c_27.question label:before {
+  content: '*';
+  color: red;
+}
+
+#bx4864_23162_4.extension_label:before {
+  content: none;
+}
+
+#bx4864_23162_fld_0.extra_value_renderer {
+  width: 300
+}
+
+.business_name span,
+.business_name input,
+.address_form span.address_line,
+.address_form input.address_line,
+.address_form input.city,
+.address_form .region,
+.address_form input.postal_code,
+.email_field span,
+.email_field input,
+.signed_name span,
+.signed_name input {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.address_form div.address_lines {
+  margin: 5px 0;
+}
+
+.address_form div.address_line {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.business_name input,
+.address_form div.address_line.first input,
+.signed_name input {
+  width: 325px;
+}
+
+.address_form div.address_line.last input {
+  width: 138px;
+}
+
+.address_form .city_container,
+.address_form .region_container,
+.address_form .postal_code_container {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.address_form .region_container select {
+  width: 165px;
+}
+
+.address_form .city_container input {
+  width: 195px;
+}
+
+.name_form .part {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.name_form input.given_name,
+.name_form input.family_name {
+  width: 130px;
+}
+
+.name_form input.suffix {
+  width: 65px;
+}
+
+#bx4864_23162_c_24.form_field {
+  margin-bottom: 30px;
+}
+  

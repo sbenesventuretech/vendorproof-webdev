@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="Vendorproof QA1">
+        <serverdata>
+          <mappings>
+            <mapping deploy="vendorproof-qa1.providertrust.com\Web\Design" local="$PROJECT_DIR$/web/design" web="/" />
+            <mapping deploy="vendorproof-qa1.providertrust.com\Web\FavIcons" local="$PROJECT_DIR$/web/favicons" web="/" />
+            <mapping deploy="vendorproof-qa1.providertrust.com\Web\Javascript" local="$PROJECT_DIR$/web/javascript" web="/" />
+            <mapping deploy="vendorproof-qa1.providertrust.com\Web\Stylesheets" local="$PROJECT_DIR$/web/stylesheets/build" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="VipaSuite Draft">
+        <serverdata>
+          <mappings>
+            <mapping deploy="" local="" web="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
