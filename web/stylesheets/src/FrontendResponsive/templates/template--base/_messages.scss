@@ -8,7 +8,9 @@
 	}
 
 	.message {
-		margin-bottom: 10px;
+		:first-child {
+			margin-top: 0;
+		}
 
 		:last-child {
 			margin-bottom: 0;
@@ -17,20 +19,7 @@
 }
 
 .message {
-	position: relative;
-	font-weight: bold;
-
-	&:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		text-align: center;
-		line-height: 9px;
-		font-size: 11px;
-	}
+	@include style-message-base;
 
 	&.error {
 		@include style-message-error;

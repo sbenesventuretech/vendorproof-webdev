@@ -37,7 +37,7 @@
 	margin: 2.33em 0;
 }
 
-@mixin style-message($color-text, $color-bg, $color-border, $color-content, $content: "") {
+@mixin style-message-override($color-text, $color-bg, $color-border, $color-content, $content: "") {
 	padding-left: 20px;
 	color: $color-text;
 
@@ -50,6 +50,25 @@
 	}
 }
 
+@mixin style-message-base {
+	display: block;
+	position: relative;
+	font-weight: bold;
+	margin: 5px 0;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 9px;
+		font-size: 11px;
+	}
+}
+
 @mixin style-message-error {
-	@include style-message(#D74300, #FFD9DA, #FFABAD, #FA797C, 'x');
+	@include style-message-override(#D74300, #FFD9DA, #FFABAD, #FA797C, 'x');
 }
