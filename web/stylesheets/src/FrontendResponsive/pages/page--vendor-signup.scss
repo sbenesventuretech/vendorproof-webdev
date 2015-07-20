@@ -1,95 +1,75 @@
 @import "../../config/base-import";
 
-.box {
-	text-align: left;
+.create_user {
+	.user_name,
+	.first_name,
+	.last_name,
+	.optin,
+	.password .double_entry_first,
+	.password .double_entry_second,
+	.email,
+	.email_verify  {
+		margin: 0 0 10px;
+	}
 
-	@include breakpoint($bp-tablets-landscape) {
-		display: inline-block;
-		*zoom: 1;
-		*display: inline;
-		vertical-align: top;
+	.password .instructions {
+		display: none;
+	}
+
+	input[type=text],
+	input[type=password] {
+		width: 100%;
+	}
+
+	label {
+		font-size: 12px;
+		display: block;
+	}
+
+	div.first_name,
+	div.last_name,
+	.password div.double_entry_first,
+	.password div.double_entry_second  {
+		float: left;
 		width: 50%;
-		padding: 0 20px;
+	}
+
+	div.first_name,
+	.password div.double_entry_first {
+		padding-right: 10px;
+	}
+
+	.email {
+		clear: both;
+	}
+
+	.password {
+		zoom: 1;
+		@include clearfix;
+	}
+
+	.actions {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.eula {
+		input[type=checkbox] {
+			margin-right: 5px;
+		}
+
+		p {
+			display: inline;
+			font-size: 12px;
+		}
 	}
 }
 
-#create_details {
-}
-
-#create_details .intro {
-	font-weight: bold;
-	line-height: 1.3;
-	font-size: 18px;
-}
-
-#create_details .intro p {
-	margin-top: 0;
-}
-
-#create_details li {
-	font-size: 16px;
-	margin: 0 0 20px;
-}
-
-#create .user_name,
-#create .first_name,
-#create .last_name,
-#create .optin,
-#create .password .double_entry_first,
-#create .password .double_entry_second,
-#create .email,
-#create .email_verify  {
-	margin: 0 0 10px;
-}
-
-#create .password .instructions {
-	display: none;
-}
-
-#create input[type=text],
-#create input[type=password] {
-	width: 100%;
-}
-
-#create label {
-	background: none;
-	padding-left: 0;
-	font-size: 12px;
-	display: block;
-}
-
-#create div.first_name,
-#create div.last_name,
-#create .password div.double_entry_first,
-#create .password div.double_entry_second  {
-	float: left;
-	width: 50%;
-}
-
-#create div.first_name,
-#create .password div.double_entry_first {
-	padding-right: 10px;
-}
-
-#create .email {
-	clear: both;
-}
-
-#create .password {
-	zoom: 1;
-	@include clearfix;
-}
-
-#create .actions {
+.existing_user {
 	text-align: center;
-	margin-top: 20px;
-}
+	margin-top: 25px;
 
-#create .eula input[type=checkbox] {
-	margin-right: 5px;
-}
-
-#create .eula p {
-	display: inline;
-	font-size: 12px;
+	p {
+		margin-bottom: 0;
+	}
 }
