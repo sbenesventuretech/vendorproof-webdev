@@ -1,0 +1,7 @@
+@import "../../config/base-import";
+
+#body_wc_0 {
+	@include breakpoint($bp-tablets-portrait) {
+		max-width: 460px;
+	}
+}

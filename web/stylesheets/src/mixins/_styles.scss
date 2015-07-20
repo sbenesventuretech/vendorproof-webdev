@@ -1,0 +1,63 @@
+@mixin style-h1 {
+	font-family: $font-georgia;
+	font-weight: normal;
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+@mixin style-h2 {
+	border-bottom: 2px dotted $color-grey-d0;
+	font-family: $font-georgia;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 1.5em;
+	margin: 0.83em 0;
+}
+
+@mixin style-h3 {
+	color: #23596a;
+	font-family: $font-georgia;
+	font-weight: normal;
+	font-size: 1.17em;
+	margin: 1em 0;
+}
+
+@mixin style-h4 {
+	font-size: 1em;
+	margin: 1.33em 0;
+}
+
+@mixin style-h5 {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+}
+
+@mixin style-h6 {
+	font-size: 0.67em;
+	margin: 2.33em 0;
+}
+
+@mixin style-message($color-text, $color-bg, $color-border, $color-content, $content: "") {
+	color: $color-text;
+
+	&:before {
+		background-color: $color-bg;
+		border: 2px solid $color-border;
+		color: $color-content;
+		content: $content;
+		display: block;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 9px;
+		vertical-align: top;
+		margin-right: 5px;
+		font-size: 11px;
+		float: left;
+	}
+}
+
+@mixin style-message-error {
+	@include style-message(#D74300, #FFD9DA, #FFABAD, #FA797C, 'x');
+}

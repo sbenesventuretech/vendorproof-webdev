@@ -1,0 +1,45 @@
+$color-white: #fff;
+$color-grey-f9: #f9f9f9;
+$color-grey-f5: #f5f5f5;
+$color-grey-f2: #f2f2f2;
+$color-grey-ef: #efefef;
+$color-grey-ee: #eee;
+$color-grey-ea: #eaeaea;
+$color-grey-e6: #e6e6e6;
+$color-grey-dd: #ddd;
+$color-grey-d5: #d5d5d5;
+$color-grey-d0: #d0d0d0;
+$color-grey-c5: #c5c5c5;
+$color-grey-cc: #ccc;
+$color-grey-bf: #bfbfbf;
+$color-grey-bb: #bbb;
+$color-grey-b3: #b3b3b3;
+$color-grey-aa: #aaa;
+$color-grey-99: #999;
+$color-grey-77: #777;
+$color-grey-55: #555;
+$color-grey-33: #333;
+$color-grey-1b: #1b1b1b;
+$color-black: #000;
+
+$color-status-notice-text: #c1bb17;
+$color-status-notice-bg: #f3e500;
+$color-status-clear-text: #4cb82f;
+$color-status-clear-bg: $color-status-clear-text;
+$color-status-attention-text: #dd2222;
+$color-status-attention-bg: $color-status-attention-text;
+
+$font-arial: arial, helvetica, sans-serif;
+$font-museo: MuseoSansRegular, $font-arial;
+$font-georgia: Georgia, "Times New Roman", serif;
+
+$default-font-size: 14px;
+
+$spacing-horizontal-mobile: 20px;
+$spacing-horizontal-tablet: 50px;
+
+$bp-mobile-landscape: (min-width 480px);
+$bp-tablets-portrait: (min-width 768px);
+$bp-tablets-landscape: (min-width 1024px);
+$bp-desktop: (min-width 1280px);
+$bp-desktop-wide: (min-width: 1400px);
