@@ -1,0 +1,42 @@
+
+/* miwt popups */
+.miwt {
+	.dialog {
+		background: $color-white;
+		border: 6px solid #23596a;
+		border-radius: 4px;
+		box-shadow: 0 0 10000px 10000px transparentize($color-black, 0.6);
+		padding: 1px;
+
+		.titlebar {
+			background: #3a7485;
+
+			td.activewindowtitle {
+				color: $color-white;
+				text-align: left;
+				font-family: $font-museo;
+				font-size: 18px;
+				padding: 10px;
+			}
+
+			td.windowbuttons {
+				padding-right: 5px;
+			}
+		}
+
+		.windowcontent {
+			top: 44px;
+			border: none;
+			padding: 10px;
+		}
+
+		.sub_editor {
+			padding: 20px;
+		}
+
+		.OptionDialog,
+		.OptionDialogButtons {
+			width: 100%;
+		}
+	}
+}

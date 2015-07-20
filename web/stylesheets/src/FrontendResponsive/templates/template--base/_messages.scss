@@ -1,0 +1,39 @@
+
+.message_container {
+	margin: 15px 0;
+	text-align: left;
+	position: relative;
+
+	+ & {
+		margin-top: -15px;
+	}
+
+	.message {
+		font-weight: bold;
+		margin-bottom: 10px;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 9px;
+			font-size: 11px;
+		}
+
+		&.error {
+			@include style-message-error;
+		}
+
+		:first-child {
+			margin-top: 0;
+		}
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
