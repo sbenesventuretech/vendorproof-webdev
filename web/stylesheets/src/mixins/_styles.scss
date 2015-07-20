@@ -38,23 +38,15 @@
 }
 
 @mixin style-message($color-text, $color-bg, $color-border, $color-content, $content: "") {
+	padding-left: 20px;
 	color: $color-text;
 
 	&:before {
+		display: block;
 		background-color: $color-bg;
 		border: 2px solid $color-border;
 		color: $color-content;
 		content: $content;
-		display: block;
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		text-align: center;
-		line-height: 9px;
-		vertical-align: top;
-		margin-right: 5px;
-		font-size: 11px;
-		float: left;
 	}
 }
 
