@@ -4,6 +4,15 @@ body, html {
   font-size: 14px;
 }
 
+a {
+	color: #07f;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 div.page {
   min-width: 980px; 
 }
