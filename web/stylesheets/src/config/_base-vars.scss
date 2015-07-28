@@ -34,6 +34,7 @@ $color-status-attention-bg: $color-status-attention-text;
 $font-arial: arial, helvetica, sans-serif;
 $font-museo: MuseoSansRegular, $font-arial;
 $font-georgia: Georgia, "Times New Roman", serif;
+$font-glyph-lib: GlyphLib, sans-serif;
 
 $default-link-color: $color-blue;
 $default-font-size: 14px;
@@ -46,3 +47,7 @@ $bp-tablets-portrait: (min-width 768px);
 $bp-tablets-landscape: (min-width 1024px);
 $bp-desktop: (min-width 1280px);
 $bp-desktop-wide: (min-width: 1400px);
+
+@import "font-glyph-entities";
+
+$default-path-fonts: '/_fonts';
