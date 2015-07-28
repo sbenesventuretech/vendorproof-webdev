@@ -1,6 +1,9 @@
 @import "../../config/base-import";
 
 @import "../../Library/normalize";
+
+@include fontFace('GlyphLib', '/glyph-lib', 'vp-glyph-font');
+
 @import "template--base/buttons";
 @import "template--base/structure";
 @import "template--base/tabs";

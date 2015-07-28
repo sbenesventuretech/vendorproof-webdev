@@ -5,3 +5,18 @@
 		clear: both;
 	}
 }
+
+// Based on Font Squirrel generated files
+@mixin fontFace($font-name, $file-path, $file-name) {
+	$font-file-path: $default-path-fonts + $file-path + '/' + $file-name;
+
+	@font-face {
+		font-family: $font-name;
+		src: url($font-file-path + '.eot');
+		src: url($font-file-path + '.eot?#iefix') format('embedded-opentype'),
+			url($font-file-path + '.woff') format('woff'),
+			url($font-file-path + '.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
