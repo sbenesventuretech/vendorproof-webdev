@@ -1,6 +1,8 @@
 @import "../../config/base-import";
 
 @import "../../Library/normalize";
+@import "../../Library/Select2/select2-responsive";
+@import "../../Library/opentip";
 
 @include fontFace('GlyphLib', '/glyph-lib', 'vp-glyph-font');
 
