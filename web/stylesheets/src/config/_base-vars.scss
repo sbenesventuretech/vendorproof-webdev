@@ -48,6 +48,8 @@ $bp-tablets-landscape: (min-width 1024px);
 $bp-desktop: (min-width 1280px);
 $bp-desktop-wide: (min-width: 1400px);
 
+$html-entity-nbsp: "\a0";
+$html-entity-rarr: "\2192";
 @import "font-glyph-entities";
 
 $default-path-fonts: '/_fonts';
