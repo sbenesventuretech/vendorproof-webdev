@@ -12,7 +12,7 @@
 		border-radius: 2px;
 
 		box-shadow: 1px 1px 1px transparentize($color-white, 0.5),
-		0 0 2px transparentize($color-black, 0.9) inset;
+			0 0 2px transparentize($color-black, 0.9) inset;
 
 		outline: none;
 		transition: all 0.25s;
@@ -92,12 +92,8 @@
 	}
 
 	.instructions {
-		font-size: 12px;
-		border: 1px solid #EAD65C;
-		background-color: #FCEFA1;
-		padding: 0 10px;
-		margin: 10px 0;
-		display: block;
+		@include style-message-base;
+		@include style-message-info;
 	}
 }
 
