@@ -6,10 +6,8 @@
 }
 
 @mixin style-h2 {
-	border-bottom: 2px dotted $color-grey-d0;
 	font-family: $font-georgia;
 	font-weight: normal;
-	font-style: italic;
 	font-size: 1.5em;
 	margin: 0.83em 0;
 }
