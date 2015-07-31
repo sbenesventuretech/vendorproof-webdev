@@ -100,31 +100,6 @@
 		display: block;
 	}
 
-	.address_form {
-		span.address_line,
-		input.address_line,
-		.city,
-		.region,
-		.postal_code {
-			margin-left: 10px;
-			margin-bottom: 5px;
-			display: block;
-		}
-	}
-
-	.name_form {
-		.part {
-			display: inline-block;
-			margin-right: 10px;
-			margin-bottom: 5px;
-		}
-
-		input.given_name,
-		input.family_name {
-			width: 170px;
-		}
-	}
-
 	.mailing_address .ctb {
 		margin: 0 0 10px;
 		display: block;
@@ -133,5 +108,32 @@
 	textarea {
 		width: 100%;
 		resize: vertical;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		.address_form {
+			span.address_line,
+			input.address_line,
+			.city,
+			.region,
+			.postal_code {
+				margin-left: 10px;
+				margin-bottom: 5px;
+				display: block;
+			}
+		}
+
+		.name_form {
+			.part {
+				display: inline-block;
+				margin-right: 10px;
+				margin-bottom: 5px;
+			}
+
+			input.given_name,
+			input.family_name {
+				width: 170px;
+			}
+		}
 	}
 }
