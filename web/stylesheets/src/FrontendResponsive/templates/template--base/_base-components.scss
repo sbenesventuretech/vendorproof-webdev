@@ -85,10 +85,26 @@ span.help_point {
 }
 
 .style-pt-tip {
+	&.opentip-container {
+		max-width: 270px;
+	}
+
 	.ot-content {
 		color: $color-white;
 		line-height: 1.3;
-		font-size: 15px;
+		font-size: 14px;
 		text-shadow: -1px -1px 0 transparentize($color-black, 0.8);
+	}
+
+	@include breakpoint($bp-mobile-landscape) {
+		&.opentip-container {
+			max-width: 300px;
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		&.opentip-container {
+			max-width: 320px;
+		}
 	}
 }
