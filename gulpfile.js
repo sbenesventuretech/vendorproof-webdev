@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
+var clip = require('gulp-clip-empty-files');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var rename = require('gulp-rename');
@@ -17,7 +17,7 @@ gulp.task('styles:copy-css', function(){
 
 gulp.task('styles:build-scss', ['styles:copy-css'], function() {
 	return gulp.src('./web/stylesheets/src/**/*.scss')
-		.pipe(plumber())
+		.pipe(clip())
 		.pipe(sass({
 			outputStyle: 'expanded'
 		}))
