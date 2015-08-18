@@ -1,0 +1,207 @@
+
+.payment_box_content {
+	padding-left: 15px;
+
+	@include breakpoint($bp-tablets-portrait) {
+		padding-left: 0;
+	}
+}
+
+.payment_table {
+	margin-top: 20px;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		float: right;
+		width: 370px;
+	}
+}
+
+table.payment_details,
+.transaction_table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 14px;
+	margin-top: 15px;
+	font-family: $font-arial;
+	font-style: normal;
+}
+
+.transaction_details {
+	margin-top: 30px;
+	@include clearfix;
+}
+
+.transaction_detail {
+	margin: 10px 0;
+
+	.label {
+		font-weight: bold;
+	}
+	.val {
+		display: block;
+		padding-left: 5px;
+	}
+}
+
+.transaction_table {
+	margin-top: 0;
+
+	.table_head {
+		td {
+			text-align: right;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		float: right;
+		width: 350px;
+	}
+}
+
+.payment_table .table_head .label {
+	font-weight: bold;
+	color: #555;
+}
+
+.payment_table .amount,
+.transaction_details .amount,
+.renew_date,
+.item_cost {
+	text-align: right;
+}
+
+.payment_table,
+.transaction_table {
+	td {
+		padding: 7px 5px;
+	}
+
+	.table_head .label,
+	.table_head_con {
+		background-color: #478bbc;
+		font-size: 13px;
+		color: $color-white;
+		font-weight: bold;
+	}
+
+	.item td,
+	.item_con {
+		font-size: 13px;
+		border-top: 1px solid $color-grey-ea;
+		background-color: $color-grey-f9;
+	}
+
+	.item_cost_con,
+	.renew_date_con {
+		text-align: right;
+	}
+
+	.total td,
+	.total_con {
+		font-weight: bold;
+	}
+
+	tr:last-child {
+		td {
+			border-top: 3px solid #478bbc;
+		}
+	}
+}
+
+.payment .property_editor {
+	margin-right: 300px;
+}
+
+.payment .property_editor .property_heading {
+	display: none;
+}
+
+.payment .property_editor .prop > label {
+	width: 130px;
+}
+
+.payment_info {
+	margin-top: 20px;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	.prop {
+		margin-bottom: 5px;
+
+		input {
+			width: 100%;
+		}
+	}
+
+	.zip {
+		input {
+			width: 50%;
+		}
+	}
+
+	.state select {
+		width: 100%;
+	}
+
+	.actions {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.action {
+		display: inline-block;
+		*zoom: 1;
+		*display: inline;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		float: left;
+		width: 220px;
+		padding-bottom: 40px;
+	}
+}
+
+#back_to_signup {
+	display: block;
+	clear: both;
+	padding-top: 40px;
+	text-align: center;
+}
+
+.persistence_actions {
+	display: block;
+	text-align: center;
+	clear: both;
+	margin: 20px 0 40px;
+}
+
+.payment_powered {
+	clear: both;
+	margin-top: 20px;
+	text-align: center;
+
+	a {
+		color: $default-font-color;
+	}
+
+	.payment_powered_text {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

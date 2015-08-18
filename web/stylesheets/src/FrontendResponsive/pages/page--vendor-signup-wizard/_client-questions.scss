@@ -1,0 +1,41 @@
+
+.client_questions {
+	.property_editor {
+		span.submit_registration_button {
+			display: none;
+		}
+	}
+
+	.question {
+		padding: 20px 0;
+		border-bottom: 1px dotted #d0d0d0;
+
+		.extra_value_name {
+			font-weight: bold;
+			display: block;
+			margin: 0 0 5px;
+		}
+
+		.ctb,
+		.rtb {
+			display: block;
+			margin: 0 0 5px;
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		.question {
+			.extra_value_name {
+				font-weight: bold;
+				display: block;
+				margin: 0 0 5px;
+			}
+
+			.ctb,
+			.rtb {
+				display: block;
+				margin: 0 0 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@import "../../config/base-import";
+
+$mobile-label-offset: 15px;
+
+@import "page--vendor-signup-wizard/structure";
+@import "page--vendor-signup-wizard/steps";
+@import "page--vendor-signup-wizard/business-info";
+@import "page--vendor-signup-wizard/components";
+@import "page--vendor-signup-wizard/client-questions";
+@import "page--vendor-signup-wizard/payment";
+@import "page--vendor-signup-wizard/receipt";
+@import "page--vendor-signup-wizard/w9form";

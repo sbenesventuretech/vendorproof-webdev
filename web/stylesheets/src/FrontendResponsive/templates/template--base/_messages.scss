@@ -21,6 +21,14 @@
 .message {
 	@include style-message-base;
 
+	:first-child {
+		margin-top: 0;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
 	&.error {
 		@include style-message-error;
 	}

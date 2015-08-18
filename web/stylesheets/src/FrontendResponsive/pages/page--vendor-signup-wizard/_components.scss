@@ -1,0 +1,94 @@
+
+.address_form label,
+.name_form .label {
+	font-size: 12px;
+	display: block;
+	margin: 0 0 3px;
+}
+
+.address_form {
+	span.address_line,
+	input.address_line,
+	input.city,
+	.region,
+	input.postal_code {
+		display: block;
+	}
+
+	div.address_lines {
+		margin: 5px 0;
+	}
+
+	div.address_line,
+	.city_container,
+	.region_container,
+	.postal_code_container {
+		margin-bottom: 5px;
+	}
+
+	select,
+	input {
+		width: 100%;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+
+		.city_container,
+		.region_container,
+		.postal_code_container,
+		div.address_line {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.address_line.first {
+			width: 70%;
+			padding-right: 10px;
+		}
+
+		.address_line.last {
+			width: 30%;
+		}
+
+		.city_container,
+		.region_container {
+			width: 40%;
+			padding-right: 10px;
+		}
+
+		.postal_code_container {
+			width: 20%;
+		}
+	}
+}
+
+.name_form {
+	.part {
+		margin-bottom: 5px;
+		display: inline-block;
+		vertical-align: top;
+
+		input {
+			width: 100%;
+		}
+	}
+
+	.given_name_container,
+	.middle_container {
+		width: 50%;
+	}
+
+	.family_name_container {
+		width: 75%;
+	}
+
+	.suffix_container {
+		width: 25%;
+	}
+
+	.middle_container,
+	.suffix_container {
+		padding-left: 10px;
+	}
+
+}
