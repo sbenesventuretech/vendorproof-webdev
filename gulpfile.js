@@ -6,11 +6,16 @@ var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var rename = require('gulp-rename');
 var _ = require('lodash');
+var del = require('del');
 
 
 gulp.task('default', ['styles']);
 
-gulp.task('styles:copy-css', function(){
+gulp.task('styles:clean', function(callback) {
+	del(['./web/stylesheets/build/**'], callback);
+});
+
+gulp.task('styles:copy-css', ['styles:clean'], function(){
 	return gulp.src('./web/stylesheets/src/**/*.css')
 		.pipe(gulp.dest('./web/stylesheets/build'));
 });
