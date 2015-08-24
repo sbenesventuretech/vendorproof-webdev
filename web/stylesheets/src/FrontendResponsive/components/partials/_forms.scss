@@ -90,9 +90,4 @@
 			background: transparent url(/resources/all/docroot/cms/icons/x16/icon_required.png) no-repeat left top;
 		}
 	}
-
-	.instructions {
-		@include style-message-base;
-		@include style-message-important;
-	}
 }
