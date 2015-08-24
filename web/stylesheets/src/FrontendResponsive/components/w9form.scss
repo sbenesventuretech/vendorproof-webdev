@@ -69,8 +69,9 @@
 			border-left: 1px solid #000;
 			padding: 15px 10px;
 			font-weight: bold;
-			height: 65px;
+			height: 95px;
 			line-height: 1.5;
+			font-size: 12px;
 		}
 	}
 
@@ -80,7 +81,7 @@
 		.instructions {
 			position: absolute;
 			left: -125px;
-			top: 135px;
+			top: 185px;
 			text-align: center;
 			font-weight: bold;
 			transform: rotate(-90deg);
@@ -122,7 +123,7 @@
 		select {
 			padding: 4px 0;
 			border: none;
-			background: transparent
+			background: transparent;
 		}
 
 		.classification {
@@ -156,12 +157,14 @@
 		}
 
 		.address_form {
+			position: absolute;
+
 			label {
 				display: none;
 			}
 
 			input,
-			select {
+			.region_container {
 				position: absolute;
 				top: 200px;
 			}
@@ -179,20 +182,19 @@
 			}
 
 			input.city {
-				top: 55px;
+				top: 60px;
 				left: 0;
 				width: 249px;
 			}
 
-			select.region {
-				top: 55px;
+			.region_container {
+				top: 60px;
 				left: 256px;
 				width: 190px;
-				margin: 0;
 			}
 
 			input.postal_code {
-				top: 55px;
+				top: 60px;
 				left: 451px;
 				width: 150px;
 			}
@@ -201,12 +203,12 @@
 		.question_subgroup .question {
 			display: inline-block;
 			vertical-align: top;
-			height: 40px;
+			height: 45px;
 			border-right: 1px solid #000;
 		}
 
 		.street_address .address_line {
-			width: 300px;
+			width: 301px;
 		}
 
 		.area {
@@ -215,15 +217,15 @@
 			}
 
 			.city {
-				width: 249px;
+				width: 250px;
 			}
 
 			.region {
-				width: 200px;
+				width: 201px;
 			}
 
 			.postal_code {
-				width: 150px;
+				width: 151px;
 			}
 		}
 
@@ -244,6 +246,7 @@
 		.trust,
 		.llc,
 		.llc_tax_class {
+			vertical-align: top;
 			display: inline-block;
 			margin-right: 20px;
 			margin-top: 10px;
@@ -258,6 +261,16 @@
 		.llc,
 		.other {
 			margin-top: 10px;
+		}
+
+		.llc {
+			line-height: 30px;
+		}
+
+		.llc_tax_class {
+			select {
+				width: 130px;
+			}
 		}
 	}
 
@@ -283,7 +296,6 @@
 					display: block;
 					border: 1px solid $color-black;
 					height: 30px;
-					line-height: 1.5;
 					font-size: 20px;
 					padding: 5px 10px;
 					font-family: $font-monospace;
