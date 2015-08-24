@@ -93,7 +93,7 @@
 
 	.instructions {
 		@include style-message-base;
-		@include style-message-info;
+		@include style-message-important;
 	}
 }
 

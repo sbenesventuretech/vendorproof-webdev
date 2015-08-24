@@ -33,7 +33,15 @@
 		@include style-message-error;
 	}
 
+	&.important {
+		@include style-message-important;
+	}
+
 	&.info {
 		@include style-message-info;
+	}
+
+	&.success {
+		@include style-message-success;
 	}
 }
