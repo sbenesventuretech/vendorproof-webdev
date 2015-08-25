@@ -115,9 +115,9 @@ jQuery(function($){
 		}
 	}
 
-	function scrollToMessages(context, btnHitId) {
+	function scrollToMessages(context) {
 		var $context = $(context);
-		if (btnHitId && $context.find('.message').length) {
+		if ($context.find('.message').length) {
 			$('html, body').scrollTop($context.find('.message').eq(0).offset().top);
 		}
 	}
@@ -243,7 +243,9 @@ jQuery(function($){
 				tempUpdates(form);
 				initSteps(form);
 				updateHelpPoints(form);
-				scrollToMessages(form, lastBtnHitId);
+				if (lastBtnHitId) {
+					scrollToMessages(form);
+				}
 			},
 			onSubmit: function() {
 				lastBtnHitId = form.btnhit.value;
@@ -255,6 +257,6 @@ jQuery(function($){
 		initSteps(form);
 		initSelectUpdates(form);
 		updateHelpPoints(form);
-		scrollToMessages(form, lastBtnHitId);
+		scrollToMessages(form);
 	});
 });
