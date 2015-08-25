@@ -1,0 +1,26 @@
+
+.field-validator {
+	&:after {
+		font-family: $font-glyph-lib;
+		font-size: 20px;
+		content: $html-entity-nbsp;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 3px;
+		margin-left: 8px;
+		transition: color 200ms;
+	}
+
+	&.field-valid {
+		&:after {
+			content: $html-entity-success;
+			color: #57944f;
+		}
+	}
+	&.field-invalid {
+		&:after {
+			content: $html-entity-error;
+			color: #FA797C;
+		}
+	}
+}

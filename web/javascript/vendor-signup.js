@@ -33,17 +33,6 @@ jQuery(function($){
 
 	function tempUpdates(context) {
 		var $context = $(context);
-		$context.find('.steps li').each(function(idx, el) {
-			$(this).find('.step_number').text(idx + 1);
-		});
-
-		$context.find('.suffix_container .label').text('Suffix');
-
-		$context.find('.step_info').each(function() {
-			$(this).html($(this).html().replace('<br>', ' '));
-		});
-
-		$context.find('.active_step_info').remove();
 
 		$.each(stepFinderConfig, function(idx, val) {
 			if ($context.find(val.query).length) {
@@ -52,53 +41,6 @@ jQuery(function($){
 				$body.removeClass(val.cls);
 			}
 		});
-
-		$context.find('.active .step_info').each(function(){
-			var curIdx = $(this).parent().index();
-			var curPage = curIdx + 1;
-			$(this)
-				.clone()
-				.insertBefore('.steps')
-				.text('Step ' + curPage + ': ' + $(this).text())
-				.addClass('active_step_info');
-		});
-
-		$context.find('.steps .active').prevAll().addClass('step_completed');
-
-		if (!$context.find('.step_con').length) {
-			$context.find('.active_step_info, .steps').wrapAll('<div class="step_con" />');
-		}
-
-		$context.find('.birth_date input[maxlength=2]').addClass('birth_date_input birth_date_month');
-		$context.find('.birth_date input[maxlength=4]').addClass('birth_date_input birth_date_year');
-
-		$context.find('.tin > .label').each(function() {
-			var tinHtml = $(this).html();
-			if (tinHtml.indexOf('label') < 0) {
-				$(this).html(tinHtml.replace('Tax Identification Number', '<label>Tax Identification Number</label>'));
-				$(this).html(tinHtml.replace('Social Security Number', '<label>Social Security Number</label>'));
-			}
-		});
-
-		$context.find('.payment_table').insertBefore('.payment_info');
-
-		$context.find('.payment_table').children().not('h2').wrapAll('<div class="payment_box_content" />');
-		$context.find('.payment_info').children().not('h2').wrapAll('<div class="payment_box_content" />');
-
-		$context.find('.payment_capture > a').each(function() {
-			var $link = $(this);
-
-			if (!$link.find('.payment_powered_text').length) {
-				$link
-					.insertAfter($context.find('.payment_info'))
-					.prepend('<span class="payment_powered_text">Payments secured by</span>')
-					.wrap('<div class="payment_powered" />');
-			}
-		});
-
-		$context.find('.persistence_actions').insertAfter('.payment_info');
-		$context.find('span.back_button').prependTo($context.find('.persistence_actions'));
-		$context.find('.payment_table h2, .payment_info h2').remove();
 
 		$context.find('.transaction_table .total').append('<td />');
 
@@ -168,6 +110,20 @@ jQuery(function($){
 			});
 		}
 
+		if ($con.find('.business_information').length) {
+			new FieldValidator($con.find('.prop.tin .val input'), {
+				validatorExpression: /^\d{9}$/
+			});
+			new FieldValidator($con.find('.prop.ssn .val input'), {
+				validatorExpression: /^\d{9}$/
+			});
+			new FieldValidator($con.find('.prop.duns .val input'), {
+				validatorExpression: /^\d{9}$/
+			});
+			new FieldValidator($con.find('.prop.npi .val input'), {
+				validatorExpression: /^\d{11}$/
+			});
+		}
 	}
 
 	function updateHelpPoints(context) {
@@ -210,6 +166,65 @@ jQuery(function($){
 					Opentip.tips[i].hide();
 				}
 			});
+	}
+
+	function FieldValidator(target, opts) {
+		var $input, $context;
+		var settings;
+		var defaults = {
+			validatorExpression: /^\d{9}$/,
+			stripBeforeValidateExpression: /[\s\-]+/g,
+			cls: {
+				valid: 'field-valid',
+				invalid: 'field-invalid'
+			}
+		};
+
+		function validate() {
+			var inputVal = $input.val() ? $input.val().trim() : "";
+			if (inputVal.length) {
+				inputVal = inputVal.replace(settings.stripBeforeValidateExpression, '');
+				if (inputVal.match(settings.validatorExpression)) {
+					$context
+						.addClass(settings.cls.valid)
+						.removeClass(settings.cls.invalid);
+				} else {
+					$context
+						.addClass(settings.cls.invalid)
+						.removeClass(settings.cls.valid);
+				}
+			} else {
+				$context.removeClass([settings.cls.valid, settings.cls.invalid].join(' '));
+			}
+		}
+
+		function addHandlers() {
+			$input.on('paste cut', function(evt) {
+				setTimeout(function() {
+					$input.trigger('fv:content-update');
+				}, 150);
+			});
+
+			$input.on('fv:content-update keydown keyup', function(evt) {
+				validate();
+			});
+		}
+
+		function init(input, opts) {
+			$input = $(input);
+			if ($input.data('fv-init')) {
+				return;
+			}
+
+			settings = $.extend({}, defaults, opts);
+			$input.wrap('<div class="field-validator" />');
+			$context = $input.parent();
+			addHandlers();
+			validate();
+			$input.data('fv-init', true);
+		}
+
+		init(target, opts);
 	}
 
 	$con.each(function(){
