@@ -1,8 +1,142 @@
 @import "../../config/base-import";
 
+.w9form {
+	@include breakpoint($bp-mobile-only) {
 
-@include breakpoint($bp-tablets-landscape) {
-	.w9form {
+		h1 {
+			display: none;
+		}
+
+		.section {
+			border-bottom: 1px solid $color-black;
+			padding-bottom: 10px;
+			@include clearfix;
+
+			.heading {
+				border-bottom: 1px solid $color-black;
+
+				.name {
+					background: $color-black;
+					color: $color-white;
+					padding: 3px 5px;
+					margin-right: 25px;
+					display: inline-block;
+				}
+
+				.description {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.header {
+			.form_id {
+				width: 150px;
+
+				.form_name {
+					display: block;
+				}
+
+				.form_number {
+					font-size: 40px;
+					line-height: 1;
+					font-weight: bold;
+					margin-left: 5px;
+				}
+			}
+
+			.form_revision {
+				display: block;
+				font-size: 11px;
+			}
+
+			.form_full_name {
+				font-weight: bold;
+				font-size: 20px;
+				padding-top: 20px;
+			}
+
+			.form_submission_instructions {
+				display: none;
+			}
+		}
+
+		.basic_info {
+			.instructions {
+				display: none;
+			}
+
+			> .form {
+				padding: 10px 0;
+			}
+
+			.question {
+				margin: 15px 0;
+
+				&.name,
+				&.dba_name,
+				&.account_numbers,
+				&.classification,
+				&.exempt {
+					> label {
+						display: block;
+						font-weight: bold;
+						margin-bottom: 3px;
+					}
+				}
+
+				&.name,
+				&.dba_name,
+				&.account_numbers {
+					input {
+						width: 100%;
+					}
+				}
+
+				&.classification {
+					> div {
+						margin: 5px 0;
+					}
+				}
+			}
+
+			.address_form {
+				label {
+					font-size: 14px;
+				}
+			}
+
+			.question_subgroup {
+				display: none;
+			}
+		}
+
+		.part1 {
+			.form {
+				.question {
+					margin: 15px 0;
+
+					label {
+						font-weight: bold;
+						display: block;
+						margin-bottom: 3px;
+					}
+
+					.val {
+						display: block;
+						border: 1px solid $color-black;
+						min-height: 35px;
+						font-size: 20px;
+						padding: 5px 10px;
+						font-family: $font-monospace;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint($bp-tablets-landscape) {
 		width: 900px;
 		margin: 0 auto;
 
@@ -315,18 +449,6 @@
 		.actions {
 			text-align: center;
 			margin-top: 50px;
-		}
-
-		.genform & .instructions {
-			border: none;
-			background: none;
-			padding: 0;
-			margin: 0;
-			color: $color-black;
-
-			&:before {
-				display: none;
-			}
 		}
 	}
 }
