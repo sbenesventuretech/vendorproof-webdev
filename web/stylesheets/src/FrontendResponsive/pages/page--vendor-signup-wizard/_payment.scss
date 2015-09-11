@@ -190,8 +190,12 @@ table.payment_details,
 	margin-top: 20px;
 	text-align: center;
 
+	&:before {
+		@include glyphAdd($html-entity-lock, 26px, #DBC018);
+	}
+
 	a {
-		color: $default-font-color;
+		color: #A08F29;
 	}
 
 	.payment_powered_text {
